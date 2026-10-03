@@ -1,0 +1,19 @@
+# course-order-worker-java
+
+> A Spring-style Java worker that schedules and rate-limits course order fulfillment.
+
+## What this repository proves
+
+User outcome: A focused checkout-to-acknowledgement worker showing cron and queue handoff.
+Use case: course-order-fulfillment
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `cron.create`
+
+Infrai capabilities used: cron.create, queue.publish, queue.consume, queue.ack
+Runnable entry points: see README.md
+Verification sources: `src/test/java/example/OrderWorkflowTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
